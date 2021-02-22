@@ -1,0 +1,27 @@
+<div class="hamburger container d-flex flex-column d-md-none">
+  <div class="d-flex justify-content-between align-items-center w-100">
+    <img
+      src="../../../assets/images/logo.jpg"
+      alt="github-logo"
+      class="github-logo mr-5"
+      routerLink="/"
+    >
+    <span class="hamburger__title">Github</span>
+    <button class="hamburger__btn" (click)="clickHambMenu()">
+      <img src="../../../assets/images/bars.svg" alt="hamburger icon" class="hamburger__i">
+    </button>
+  </div>
+  <div id="hamburger__menu" class="hamburger__menu" *ngIf="showMenu">
+    <div class="hamburger__menu__top d-flex justify-content-end container">
+      <button (click)="clickHambMenu()" class="hamburger__menu__top__btn my-2 px-3">X</button>
+    </div>
+    <div class="container d-flex flex-column justify-content-center">
+      <span class="hamburger__menu__item">Why Github?</span>
+      <span class="hamburger__menu__item">Team</span>
+      <span class="hamburger__menu__item">Enterprise</span>
+      <span class="hamburger__menu__item">Explore</span>
+      <span class="hamburger__menu__item">Marketplace</span>
+      <span class="hamburger__menu__item">Pricing</span>
+    </div>
+  </div>
+</div>

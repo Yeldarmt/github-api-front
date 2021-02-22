@@ -1,0 +1,17 @@
+@import 'src/assets/scss/variables';
+
+.repos__item {
+  padding: 2rem 0;
+  border-bottom: 1px solid $color-light-gray;
+  font-size: 1.2rem;
+  &__name {
+    color: $color-text-blue;
+  }
+  .item-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: $color-green-blue;
+    border-radius: 50%;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,77 @@
+@import "src/assets/scss/variables";
+
+.repos {
+  padding-top: 3rem;
+  .repos-owner {
+    &__image {
+      width: 75%;
+      border-radius: 80%;
+    }
+    &__content {
+      width: 75%;
+      .btn-owner {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__search {
+    //border-bottom: 1px solid gray;
+    &__btn {
+      height: 3.6rem;
+      font-size: 1.4rem;
+    }
+    &__create {
+      position: absolute;
+      width: 400px;
+      height: 50px;
+      top: 50px;
+      right: 0;
+      background: $color-light-gray;
+      box-shadow: 1rem 1rem 2rem rgba($color-black, .5);
+      .create-input {
+        width: 75%;
+        font-size: 1.2rem;
+        border: none;
+        padding-left: 2rem;
+      }
+      .create-btn {
+        width: 20%;
+        font-size: 1.4rem;
+      }
+      .create-close {
+        font-size: 1.8rem;
+        font-weight: 600;
+        border: 1px solid $color-black;
+        cursor: pointer;
+      }
+    }
+  }
+  &__list {
+    &__image {
+      width: 2rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .repos {
+    .repos-owner {
+      align-items: center;
+      margin-bottom: 2rem;
+      &__image {
+        width: 50%;
+        border-radius: 50%;
+      }
+    }
+    &__search {
+      &__create {
+        width: 90%;
+        margin: 0 5%;
+      }
+    }
+  }
+}

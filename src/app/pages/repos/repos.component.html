@@ -1,0 +1,69 @@
+<div class="repos">
+  <div class="container">
+    <div class="row d-flex flex-column flex-md-row">
+      <div class="col-md-4 repos-owner d-flex flex-column">
+        <img src="{{repositoriesList[0].owner.avatarUrl}}" alt="user-logo" class="repos-owner__image">
+        <div class="repos-owner__content d-flex flex-column mt-4">
+          <span class="heading-default">{{repositoriesList[0].owner.name}}</span>
+          <span>{{repositoriesList.length}} repositories</span>
+          <button class="btn btn-outline-secondary btn-owner mt-4">Follow</button>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="repos__search d-flex justify-content-between">
+          <form class="d-flex flex-wrap">
+            <mat-form-field appearance="fill" class="mr-5">
+              <mat-label>Language: {{langCtrl.value}}</mat-label>
+              <mat-select [formControl]="langCtrl">
+                <mat-option value="All">
+                  All
+                </mat-option>
+                <mat-option *ngFor="let n of langList" [value]="n">
+                  {{n}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>Date created:</mat-label>
+              <mat-select [formControl]="dateCreateCtrl">
+                <mat-option value="asc">
+                  Ascending
+                </mat-option>
+                <mat-option value="desc">
+                  Descending
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+          <div class="">
+            <button class="btn btn-success repos__search__btn px-5" (click)="openModal()">New</button>
+            <div
+              class="repos__search__create d-flex justify-content-between p-3"
+              *ngIf="isModalVisible"
+            >
+              <input
+                type="text"
+                placeholder="Type the repository name ..."
+                class="create-input"
+                [formControl]="repoNameCtrl"
+              />
+              <button
+                class="btn btn-success create-btn ml-2"
+                (click)="createRepo()"
+                [disabled]="repoNameCtrl.invalid"
+              >
+                Create
+              </button>
+              <span class="create-close px-3 ml-2" (click)="closeModal()">x</span>
+            </div>
+          </div>
+        </div>
+        <div class="repos__list">
+          <app-repos-item *ngFor="let n of sortedArray" [item]="n">
+                <img src="../../../assets/images/trash.png" alt="trash" class="repos__list__image" (click)="removeRepo(n)">
+          </app-repos-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

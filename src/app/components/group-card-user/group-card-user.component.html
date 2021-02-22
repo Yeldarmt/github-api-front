@@ -1,0 +1,9 @@
+<div class="search-block__users d-flex flex-column mt-3">
+  <app-card-user *ngFor="let n of usersList" [user]="n"></app-card-user>
+  <span
+    class="search-block__users__error text-danger py-3"
+    *ngIf="isSearchClicked && usersList.length < 1 && showError"
+  >
+    User with this name does not exist!
+  </span>
+</div>

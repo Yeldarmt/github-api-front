@@ -1,0 +1,41 @@
+@import "src/assets/scss/variables";
+
+.header {
+  max-height: 8vh;
+
+  &__toolbar {
+    background-color: $header-bg-black;
+
+    .header__items {
+      color: $color-white;
+      font-size: 1.6rem;
+
+      .github-logo {
+        width: 4.5rem;
+        cursor: pointer;
+        border-radius: 50%;
+        clip-path: circle(16px);
+      }
+
+      &__item:not(:last-child) {
+        margin-right: 2.4rem;
+      }
+
+      .btn-header {
+        &:link,
+        &:visited {
+          font-size: $default-font-size;
+          color: $color-white;
+          display: inline-block;
+          text-decoration: none;
+          padding: 4px;
+        }
+
+        &--outlined {
+          border: 1px solid $color-white;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

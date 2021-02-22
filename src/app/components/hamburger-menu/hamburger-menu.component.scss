@@ -1,0 +1,39 @@
+@import "src/assets/scss/variables";
+
+.hamburger {
+  .github-logo {
+    width: 4.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    clip-path: circle(16px);
+  }
+  &__title {
+    font-size: $default-font-size;
+    color: $color-white;
+    transform: translate(-50%, 0);
+  }
+  &__btn {
+    background-color: $header-bg-black;
+  }
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    background-color: $header-bg-black;
+    &__top {
+      border-bottom: 1px solid $color-black;
+      &__btn {
+        background-color: $header-bg-black;
+      }
+    }
+    &__item {
+      color: $color-white;
+      text-align: center;
+      cursor: pointer;
+      padding-top: 1rem;
+    }
+  }
+}

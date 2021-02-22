@@ -1,0 +1,7 @@
+<div class="search-block__user d-flex justify-content-between px-3">
+  <div class="d-flex align-items-center">
+    <img src="{{user.avatarUrl}}}" alt="" class="user-avatar">
+    <a class="user-name ml-3" routerLink="/repos/{{user.name}}">{{user.name}}</a>
+  </div>
+  <button class="btn btn-secondary px-5 my-3" routerLink="/repos/{{user.name}}">Follow</button>
+</div>

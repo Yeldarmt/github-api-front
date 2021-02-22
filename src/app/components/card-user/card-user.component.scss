@@ -1,0 +1,23 @@
+@import "src/assets/scss/variables";
+
+.search-block__user {
+  cursor: pointer;
+  .user-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3rem;
+  }
+  .user-name {
+    font-size: 1.6rem;
+    color: rgb(88, 96, 105);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-light-gray;
+  }
+  &:hover {
+    background-color: $color-light-gray;
+  }
+}

@@ -1,0 +1,28 @@
+@import "variables";
+
+.heading-primary {
+  color: $color-white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin: 3rem;
+}
+
+.heading-default {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 998px) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-primary {
+    font-size: 2rem;
+  }
+}

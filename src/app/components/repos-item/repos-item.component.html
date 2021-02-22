@@ -1,0 +1,17 @@
+<div
+  class="repos__item d-flex justify-content-between align-items-center"
+>
+  <div>
+    <h3 class="repos__item__name">{{item.name}}</h3>
+    <div class="d-flex flex-column flex-md-row align-items-lg-center mt-4">
+      <div class="d-flex align-items-center mb-md-0 mb-3">
+        <span class="item-dot mr-2" *ngIf="item.language"></span>
+        <span class="mr-4" *ngIf="item.language">{{item.language}}</span>
+      </div>
+      <span class="">Created at {{moment(item.createdAt).format('LLLL')}}</span>
+    </div>
+  </div>
+  <div class="mr-md-5 mr-0 ml-md-0 ml-3">
+    <ng-content></ng-content>
+  </div>
+</div>
